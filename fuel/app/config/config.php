@@ -93,7 +93,7 @@ return array(
 	 * default_timezone		optional, if you want to change the server's default timezone
 	 */
 	// 'server_gmt_offset'  => 0,
-	// 'default_timezone'   => null,
+	 'default_timezone'   => 'UTC',
 
 	/**
 	 * Logging Threshold.  Can be set to any of the following:
@@ -256,7 +256,7 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	// 'always_load'  => array(
+	 'always_load'  => array(
 
 		/**
 		 * These packages are loaded on Fuel's startup.
@@ -269,7 +269,11 @@ return array(
 		 *     array('auth'	=> PKGPATH.'auth/')
 		 * );
 		 */
-		// 'packages'  => array(
+
+		 'packages'  => array(
+			 'auth',
+		 ),
+	 ),
 		// 	//'orm',
 		// ),
 

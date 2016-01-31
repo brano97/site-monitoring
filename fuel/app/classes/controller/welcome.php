@@ -29,6 +29,10 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
+		if(! Auth::check())
+		{
+			return Response::redirect('auth/login');
+		}
 		return Response::forge(View::forge('welcome/index'));
 	}
 
@@ -54,4 +58,5 @@ class Controller_Welcome extends Controller
 	{
 		return Response::forge(Presenter::forge('welcome/404'), 404);
 	}
+
 }

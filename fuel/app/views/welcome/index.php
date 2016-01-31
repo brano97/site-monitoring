@@ -37,9 +37,13 @@
 	</header>
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Welcome!</h1>
+			<h1>Witaj!</h1>
 			<p>You have successfully installed the FuelPHP Framework.</p>
-			<p><a class="btn btn-primary btn-lg" href="http://docs.fuelphp.com">Read the Docs</a></p>
+			<p>
+				<a class="btn btn-primary btn-lg" href="http://docs.fuelphp.com">Read the Docs</a>
+				<a class="btn btn-danger btn-lg" href="/site-monitoring/public/auth/logout">Logout</a>
+			</p>
+
 		</div>
 		<div class="row">
 			<div class="col-md-4">

@@ -1,0 +1,13 @@
+#login-wrapper {
+    font-family: "Open sans", sans-serif;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    padding: 30px;
+    margin-top:100px;
+}
+.input-field{
+    width:100%;
+    display: block;
+    padding:10px;
+    margin-bottom:5%;
+}
