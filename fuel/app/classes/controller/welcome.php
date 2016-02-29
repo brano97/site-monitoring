@@ -31,7 +31,7 @@ class Controller_Welcome extends Controller
 	{
 		if(! Auth::check())
 		{
-			return Response::redirect('auth/login');
+			return Response::redirect('auth/login?url='.Input::uri());
 		}
 		return Response::forge(View::forge('welcome/index'));
 	}

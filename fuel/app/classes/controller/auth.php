@@ -15,19 +15,19 @@ class Controller_Auth extends Controller
      */
     public function action_logout()
     {
-        Auth::logout();
-        $data = array();
-        $data['login_error'] = '';
-        $data['username'] = '';
-        return Response::forge(View::forge('auth/login',$data));
+        Auth::logout();                             //Destroy login session via Auth framework
+        return Response::redirect('auth/login');    //Redirect user back to the login with no refferal URI
     }
 
 
         public function action_login()
     {
+        $referralUrl = Input::get('url');
         $data = array();
         $data['login_error'] = '';
         $data['username'] = '';
+        $data['referralUrl'] = $referralUrl;
+
         // If so, you pressed the submit button. Let's go over the steps.
         if (Input::post())
         {
@@ -36,7 +36,7 @@ class Controller_Auth extends Controller
             if (Auth::login())
             {
                 // Credentials ok, go right in.
-                Response::redirect('welcome/index');
+                Response::redirect($referralUrl);
             }
             else
             {
@@ -49,5 +49,13 @@ class Controller_Auth extends Controller
 
         // Show the login form.
         echo View::forge('auth/login',$data);
+    }
+    public function action_register()
+    {
+        if(Input::post())
+        {
+            //TO DO
+        }
+        echo View::forge('auth/register');
     }
 }

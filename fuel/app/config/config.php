@@ -11,7 +11,6 @@
  */
 
 return array(
-
 	/**
 	 * base_url - The base URL of the application.
 	 * MUST contain a trailing slash (/)
