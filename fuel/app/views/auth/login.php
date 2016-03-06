@@ -11,6 +11,5 @@
     <input type="submit" name="submit" value="Log in" class="btn btn-lg btn-primary pull-right"/>
     <a href="#" class="pull-left" style="padding:12px 30px 10px 0px;">Forgot password?</a>
 </form>
-    <?php echo $referralUrl; ?>
 </div>
 
