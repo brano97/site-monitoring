@@ -14,9 +14,9 @@ class Controller_Dashboard extends Controller_Template
         {
             return Response::redirect('auth/login?url='.Input::uri());
         }
-       $data["auth_username"] = Auth::get('username', 'Unnamed');
+        $data["auth_username"] = Auth::get('username', 'Unnamed');
         $this->template->title = "Fuck you!";
-        $this->template->auth_username = $data["auth_username"];
+        $this->template->template_auth_username = $data["auth_username"];
         $this->template->content = View::Forge('dashboard/index',$data);
     }
 }
